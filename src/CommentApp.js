@@ -1,6 +1,7 @@
 import React,{ Component } from 'react'
 import CommentInput from './CommentInput'
 import CommentList from './CommentList'
+import Clock from "./Clock";
 
 class CommentApp extends Component{
     constructor() {
@@ -20,7 +21,8 @@ class CommentApp extends Component{
     render() {
         return(
             <div className='wrapper'>
-                <CommentInput onSubmit={this.handleSubmitComment.bind(this)} />
+                <Clock />
+                <CommentInput onTestSubmit={this.handleSubmitComment.bind(this)} />
                 <CommentList comments={this.state.comments} />
             </div>
         )

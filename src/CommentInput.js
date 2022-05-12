@@ -19,9 +19,10 @@ class CommentInput extends Component{
         })
     }
     handleSubmit(){
-        if(this.props.onSubmit){
+        if(this.props.onTestSubmit){
             const { username, content } = this.state
-            this.props.onSubmit({ username, content})
+            console.log(username, content)
+            this.props.onTestSubmit({ username, content})
         }
         this.setState({content: ''})
     }
